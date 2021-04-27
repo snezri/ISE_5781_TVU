@@ -8,7 +8,7 @@ public class Vector {
        if(p.equals(Point3D.ZERO)){
            throw new IllegalArgumentException("Vector cannot be 0");
        }
-        this.head=head;
+        this.head=p;
     }
 
     public Vector(Point3D p){
@@ -39,12 +39,12 @@ public class Vector {
                 '}';
     }
 
-    public Vector add(Vector v1,Vector v2){
-        return new Vector(v1.head.x.coord+v2.head.x.coord,v1.head.y.coord+v2.head.y.coord,v1.head.z.coord+v2.head.z.coord);
+    public Vector add(Vector v2){
+        return new Vector(this.head.x.coord+v2.head.x.coord,this.head.y.coord+v2.head.y.coord,this.head.z.coord+v2.head.z.coord);
     }
 
-    public Vector substract(Vector v1,Vector v2){
-        return new Vector(v1.head.x.coord-v2.head.x.coord,v1.head.y.coord-v2.head.y.coord,v1.head.z.coord-v2.head.z.coord);
+    public Vector substract(Vector v2){
+        return new Vector(this.head.x.coord-v2.head.x.coord,this.head.y.coord-v2.head.y.coord,this.head.z.coord-v2.head.z.coord);
     }
 
     public Vector scale( double num){

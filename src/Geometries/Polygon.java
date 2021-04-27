@@ -1,18 +1,16 @@
-/**
- * @author Sarah Nezri 1692367 saraamouia13@gmail.com
- * @author Dina Hayoun 1748352 dinahayoun75@gmail.com
- */
-
 package Geometries;
 
 import java.util.List;
+
+import Geometries.Geometry;
+import Geometries.Plane;
 import Primitives.*;
 import static Primitives.Util.*;
 
 /**
  * Polygon class represents two-dimensional polygon in 3D Cartesian coordinate
  * system
- * 
+ *
  * @author Dan
  */
 public class Polygon implements Geometry {
@@ -28,7 +26,7 @@ public class Polygon implements Geometry {
 	/**
 	 * Polygon constructor based on vertices list. The list must be ordered by edge
 	 * path. The polygon must be convex.
-	 * 
+	 *
 	 * @param vertices list of vertices according to their order by edge path
 	 * @throws IllegalArgumentException in any case of illegal combination of
 	 *                                  vertices:

@@ -16,7 +16,7 @@ public class Ray {
         return p0;
     }
 
-    public Vector getVector(){
+    public Vector getDir(){
         return dir;
     }
 
@@ -30,8 +30,10 @@ public class Ray {
     }
 
     @Override
-    public String ToString(){
-        return "The Ray is: Point3D "+ p0+ " and a vector " + dir;
+    public String toString() {
+        return "Ray{" +
+                "p0=" + p0 +
+                ", dir=" + dir +
+                '}';
     }
-
 }

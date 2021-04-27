@@ -47,12 +47,12 @@ public class Point3D {
         return new Point3D(this.x.coord+V.head.x.coord,this.y.coord+V.head.y.coord,this.z.coord+V.head.z.coord);
     }
 
-    public double distanceSquared(Point3D a,Point3D b){
-        return ((b.x.coord-a.x.coord)*(b.x.coord-a.x.coord)+(b.y.coord-a.y.coord)*(b.y.coord-a.y.coord)+(b.z.coord-a.z.coord)*(b.z.coord-a.z.coord));
+    public double distanceSquared(Point3D a){
+        return ((this.x.coord-a.x.coord)*(this.x.coord-a.x.coord)+(this.y.coord-a.y.coord)*(this.y.coord-a.y.coord)+(this.z.coord-a.z.coord)*(this.z.coord-a.z.coord));
     }
 
-    public double distance(Point3D a,Point3D b){
-        return Math.sqrt(distanceSquared(a,b));
+    public double distance(Point3D a){
+        return Math.sqrt(distanceSquared(a));
     }
 
 

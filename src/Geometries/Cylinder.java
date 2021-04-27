@@ -1,12 +1,14 @@
 package Geometries;
 
 import Primitives.Point3D;
+import Primitives.Ray;
 import Primitives.Vector;
 
-public class Cylinder implements Geometry{
+public class Cylinder extends Tube{
     double height;
 
-    public Cylinder(double height) {
+    public Cylinder(Ray r , double rad, double height) {
+        super(r,rad);
         this.height = height;
     }
 
