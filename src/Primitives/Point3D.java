@@ -7,6 +7,17 @@ public class Point3D {
     Coordinate z;
     public final static Point3D ZERO = new Point3D(0,0,0);
 
+    public double getX() {
+        return this.x.coord;
+    }
+
+    public double getY(){
+        return this.y.coord;
+    }
+    public double getZ(){
+        return this.z.coord;
+    }
+
     public Point3D(double x, double y, double z)
     {
         this.x=new Coordinate(x);

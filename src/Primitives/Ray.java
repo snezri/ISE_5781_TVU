@@ -36,4 +36,12 @@ public class Ray {
                 ", dir=" + dir +
                 '}';
     }
+
+    public Point3D getPoint(double delta ){
+        if (isZero(delta)){
+            return  p0;
+        }
+        return p0.add(dir.scale(delta));
+    }
+
 }
