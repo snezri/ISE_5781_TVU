@@ -19,7 +19,7 @@ public class PolygonTests {
 
     /**
      * Test method for
-     * {@link Geometries.Polygon#Polygon(Point3D...)} olygon(Primitives.Point3D, Primitives.Point3D, Primitives.Point3D,    Primitives.Point3D)}.
+     * {@link Polygon#Polygon(Point3D...)} olygon(Primitives.Point3D, Primitives.Point3D, Primitives.Point3D,    Primitives.Point3D)}.
      */
     @Test
     public void testConstructor() {
@@ -27,7 +27,7 @@ public class PolygonTests {
 
         // TC01: Correct concave quadrangular with vertices in correct order
         try {
-            new Geometries.Polygon(new Point3D(0, 0, 1), new Point3D(1, 0, 0),
+            new Polygon(new Point3D(0, 0, 1), new Point3D(1, 0, 0),
                     new Point3D(0, 1, 0), new Point3D(-1, 1, 1));
         } catch (IllegalArgumentException e) {
             fail("Failed constructing a correct polygon");
@@ -80,7 +80,7 @@ public class PolygonTests {
     }
 
     /**
-     * Test method for {@link Geometries.Polygon#getNormal(Primitives.Point3D)}.
+     * Test method for {@link Polygon#getNormal(Primitives.Point3D)}.
      */
     @Test
     public void testGetNormal() {
