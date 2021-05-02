@@ -11,6 +11,9 @@ public class Camera {
     private Vector vUp, vRight, vTo;
     double width, heigth, distance;
 
+    /**
+     * Constructor - Construct the camera and normalize the vectors and create the normal vector
+     */
     public Camera(Point3D p0, Vector vUp, Vector vTo) {
         this.p0 = p0;
         if(vUp.dotProduct(vTo)!=0)
@@ -20,28 +23,71 @@ public class Camera {
         this.vRight=(vUp.crossProduct(vTo)).normalized();
     }
 
+    /**
+     * Vector getter
+     * @return vUp
+     */
     public Vector getvUp() { return vUp; }
 
+    /**
+     * Vector getter
+     * @return vTo
+     */
     public Vector getvTo() { return vTo; }
 
+    /**
+     * Vector getter
+     * @return vRight
+     */
     public Vector getvRight() { return vRight; }
 
+    /**
+     * Vector getter
+     * @return P0
+     */
     public Point3D getP0() { return p0;}
 
+    /**
+     * Vector getter
+     * @return Height
+     */
     public double getHeight(){return heigth;}
+
+    /**
+     * Vector getter
+     * @return Width
+     */
     public double getWidth(){return width;}
+
+    /**
+     * Vector getter
+     * @return Distance
+     */
     public double getDistance(){return distance;}
+
+
+    /**
+     * Vector setter
+     * @param height , width
+     */
     public Camera setViewPlaneSize(double width, double height){
         this.width=width;
         this.heigth=height;
         return this;
     }
 
+    /**
+     * Vector setter
+     * @param distance
+     */
     public Camera setDistance(double distance){
         this.distance=distance;
         return this;
     }
 
+    /**
+     *constructing a ray passing through a pixel
+     */
     public Ray constructRayThroughPixel(int nX, int nY, int j, int i) {
         Point3D Pc = p0.add(vTo.scale(distance));
 
